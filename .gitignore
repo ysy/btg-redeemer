@@ -56,3 +56,9 @@ typings/
 
 # dotenv environment variables file
 .env
+
+docs/bignumber.js
+docs/bitcoin.js
+docs/bulma.css
+docs/jquery.min.js
+package-lock.json
