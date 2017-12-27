@@ -4,7 +4,7 @@
   "description": "Tool redeem BTG",
   "main": "index.js",
   "scripts": {
-    "build": "cd bitcoinjs-lib && git checkout opt-in-bitcoincash-sighash && npm install && cd .. && browserify bitcoinjs_browserify.js --standalone bccr > docs/bitcoin.js && cp node_modules/jquery/dist/jquery.min.js docs/jquery.min.js && cp -r node_modules/bulma/css/bulma.css docs/bulma.css  && cp -r node_modules/bignumber.js/bignumber.min.js docs/bignumber.js",
+    "build": "npm install && browserify bitcoinjs_browserify.js --standalone bccr > docs/bitcoin.js && cp node_modules/jquery/dist/jquery.min.js docs/jquery.min.js && cp -r node_modules/bulma/css/bulma.css docs/bulma.css  && cp -r node_modules/bignumber.js/bignumber.min.js docs/bignumber.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,8 +18,13 @@
   },
   "homepage": "https://github.com/panlilu/btg-redeemer#readme",
   "dependencies": {
+    "bigi": "^1.4.0",
     "bignumber.js": "^5.0.0",
+    "bitcoinforksjs-lib": "github:ysy/bitcoinjs-lib#opt-in-bitcoincash-sighash",
+    "bitcoinjs-lib": "ysy/bitcoinjs-lib#opt-in-bitcoincash-sighash",
+    "bs58": "^4.0.0",
     "bulma": "^0.6.1",
+    "ecurve": "^1.0.0",
     "jquery": "^3.2.1"
   }
 }
